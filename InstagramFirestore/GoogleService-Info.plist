@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1081132048706-6d2n2fnhi3hs2l3am6bbh51jkbrnkd9l.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1081132048706-6d2n2fnhi3hs2l3am6bbh51jkbrnkd9l</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC3N2EvBetlTw0sc_vwvI9FZTua2hnYwhc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1081132048706</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.Anahi.ClassesDemo.InstagramFirestore</string>
+	<key>PROJECT_ID</key>
+	<string>instagramfirestoretutori-7c00a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>instagramfirestoretutori-7c00a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1081132048706:ios:02f92d5b04a9f4ab9428db</string>
+</dict>
+</plist>
