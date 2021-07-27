@@ -15,6 +15,8 @@ struct User {
     let username: String
     let uid: String
     
+    var stats: UserStats!
+    
     var isFollowed = false
     
     //Return true if user has the current user uid
@@ -27,5 +29,14 @@ struct User {
         self.username = dictionary["username"] as? String ?? ""
         self.uid = dictionary["uid"] as? String ?? ""
         
+        self.stats = UserStats(followers: 0, following: 0)
+        
     }
+}
+
+
+struct UserStats {
+    let followers: Int
+    let following: Int
+    //let posts: Int
 }
