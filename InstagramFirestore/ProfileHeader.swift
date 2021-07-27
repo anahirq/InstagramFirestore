@@ -8,12 +8,20 @@
 import UIKit
 import SDWebImage
 
+protocol ProfileHeaderDelegate: class{
+    func header(_ profileHeader: ProfileHeader, didTapActionButtonFor user: User)
+}
+
+
+
 class ProfileHeader: UICollectionReusableView {
     //MARK: - Properties
     
     var viewModel: ProfileHeaderViewModel? {
         didSet { configure() }
     }
+    
+    weak var delegate: ProfileHeaderDelegate?
     
     private let profileImageView: UIImageView = {
         let iv = UIImageView()
@@ -32,7 +40,7 @@ class ProfileHeader: UICollectionReusableView {
     
     private lazy var editProfileFollowButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Edit Profile", for: .normal)
+        button.setTitle("Loading", for: .normal)
         button.layer.cornerRadius = 5
         button.layer.borderColor = UIColor.lightGray.cgColor
         button.layer.borderWidth = 0.5
@@ -140,19 +148,24 @@ class ProfileHeader: UICollectionReusableView {
     //MARK: - Actions
     
     @objc func handleEditProfileFollowTapped(){
-        print("DEBUG: handleEditProfileFollowTapped")
+        guard let viewModel = viewModel else { return }
+        delegate?.header(self, didTapActionButtonFor: viewModel.user)
     }
     
-    //MARK: - Helper
+    //MARK: - Helpers
     
     func configure(){
         guard let viewModel = viewModel else { return }
         
         nameLabel.text = viewModel.fullname
         profileImageView.sd_setImage(with: viewModel.profileImageUrl)
+        
+        editProfileFollowButton.setTitle(viewModel.followButtonText, for: .normal)
+        editProfileFollowButton.setTitleColor(viewModel.followButtonTextColor, for: .normal)
+        editProfileFollowButton.backgroundColor = viewModel.followButtonBackgroundColor
     }
-    //Attributed label: It's when you combine diferent styles of thex in one label
     
+    //Attributed label: It's when you combine diferent styles of text in one label
     func attributedStatText(value: Int, label: String) -> NSAttributedString{
         let attributedText = NSMutableAttributedString(string: "\(value)\n", attributes: [.font: UIFont.boldSystemFont(ofSize: 14)])
         attributedText.append(NSAttributedString(string: label, attributes: [.font: UIFont.systemFont(ofSize: 14), .foregroundColor: UIColor.lightGray]))
