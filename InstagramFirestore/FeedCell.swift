@@ -11,13 +11,17 @@ class FeedCell: UICollectionViewCell {
     
     //MARK: - Properties
     
+    var viewModel: PostViewModel? {
+        didSet { configure() }
+    }
+    
     //Profile picture
     private let profileImageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
-        iv.image = #imageLiteral(resourceName: "venom-7")
         iv.isUserInteractionEnabled = true
+        iv.backgroundColor = .lightGray
         
         return iv
     }()
@@ -27,7 +31,6 @@ class FeedCell: UICollectionViewCell {
     private lazy var usernameButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitleColor(.black, for: .normal)
-        button.setTitle("venom", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 13)
         //Action handler
         button.addTarget(self, action: #selector(didTapUsername), for: .touchUpInside)
@@ -72,7 +75,6 @@ class FeedCell: UICollectionViewCell {
     //Number of likes label
     private let likesLabel: UILabel = {
        let label = UILabel()
-        label.text = "1 Like"
         label.font = UIFont.boldSystemFont(ofSize: 13)
         return label
     }()
@@ -80,7 +82,6 @@ class FeedCell: UICollectionViewCell {
     //Caption label
     private let captionLabel: UILabel = {
        let label = UILabel()
-        label.text = "Caption example :) "
         label.font = UIFont.systemFont(ofSize: 14)
         return label
     }()
@@ -143,6 +144,21 @@ class FeedCell: UICollectionViewCell {
     }
     
     // MARK: - Helpers
+    
+    //retrive images posted and saved into database with all it's information
+    func configure() {
+        guard let viewModel = viewModel else { return }
+        
+        captionLabel.text = viewModel.caption
+        //retrive image
+        postImageView.sd_setImage(with: viewModel.imageUrl)
+        
+        profileImageView.sd_setImage(with: viewModel.userProfileImageUrl)
+        usernameButton.setTitle(viewModel.username, for: .normal)
+        
+        likesLabel.text = viewModel.likesLabelText
+    }
+    
     
     //Add buttons below posted photo
     func configureActionButtons() {

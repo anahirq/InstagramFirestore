@@ -15,6 +15,9 @@ class RegistrationController: UIViewController {
     private var viewModel = RegistrationViewModel()
     private var profileImage: UIImage?
     
+    //LInea agregada el 29 julio
+    weak var delegate: AuthenticationDelegate?
+    
     private let plushPhotoButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(#imageLiteral(resourceName: "plus_photo"), for: .normal)
@@ -103,7 +106,10 @@ class RegistrationController: UIViewController {
             }
             
             //Get back to the main controller 
-            self.dismiss(animated: true, completion: nil)
+            //self.dismiss(animated: true, completion: nil)
+            
+            //LInea gregada el 29 julio
+            self.delegate?.authenticationDidComplete()
             
         }
     }

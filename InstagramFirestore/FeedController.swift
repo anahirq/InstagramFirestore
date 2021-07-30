@@ -13,13 +13,22 @@ private let reuseIdentifier = "Cell"
 class FeedController: UICollectionViewController {
    
     //MARK: - Lifecycle
+    
+    private var posts = [Post]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureUI()
+        fetchPosts()
     }
     
     //MARK: - Actions
+    
+    @objc func handleRefresh(){
+        posts.removeAll()
+        fetchPosts()
+    }
     
     @objc func handleLogout(){
         do {
@@ -34,6 +43,20 @@ class FeedController: UICollectionViewController {
         }
         
     }
+
+    //MARK: - API
+    
+    func fetchPosts() {
+        PostService.fetchPosts { posts in
+            self.posts = posts
+            
+            print("DEBUG: Did Fetch posts")
+            
+            self.collectionView.refreshControl?.endRefreshing()
+            self.collectionView.reloadData()
+        }
+    }
+    
     
     //MARK: - helpers
     
@@ -48,15 +71,21 @@ class FeedController: UICollectionViewController {
                                                             action: #selector(handleLogout))
         
         navigationItem.title = "Feed"
+        
+        let refresher = UIRefreshControl()
+        refresher.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
+        collectionView.refreshControl = refresher
+        
     }
 }
 
-//MARK- UICollectionViewDataSource
+//MARK: - UICollectionViewDataSource
+
 extension FeedController {
     
     //How many cell we're going to create
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return posts.count
     }
     
     //Defines each cell in the collection view and how to create it
@@ -64,6 +93,7 @@ extension FeedController {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FeedCell
         
+        cell.viewModel = PostViewModel(posts: posts[indexPath.row])
         return cell
     }
 }
@@ -84,3 +114,5 @@ extension FeedController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: width, height: height)
     }
 }
+
+
