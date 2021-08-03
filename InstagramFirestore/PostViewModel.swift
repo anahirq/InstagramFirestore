@@ -8,7 +8,7 @@
 import Foundation
 
 struct PostViewModel {
-    private let post: Post
+    let post: Post
     
     var imageUrl: URL? { return URL(string: post.imageUrl) }
     
@@ -28,7 +28,7 @@ struct PostViewModel {
         }
     }
     
-    init(posts: Post) {
-        self.post = posts
+    init(post: Post) {
+        self.post = post
     }
 }

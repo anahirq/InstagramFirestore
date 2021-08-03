@@ -32,4 +32,25 @@ struct PostService {
             completion(posts)
         }
     }
+    
+    //Fetch post for profile section
+    static func fetchPosts(forUser uid: String, completion: @escaping([Post]) -> Void){
+        let query = COLLECTION_POSTS.whereField("ownerUid", isEqualTo: uid)
+        
+        query.getDocuments { (snaphot, error) in
+            guard let documents = snaphot?.documents else { return }
+            
+            var posts = documents.map({ Post(postId: $0.documentID, dictionary: $0.data()) })
+            
+            //order posts from oldest to newest
+            posts.sort { (post1, post2) -> Bool in
+                return post1.timestamp.seconds > post2.timestamp.seconds
+            }
+            
+            completion(posts)
+            
+            
+        }
+    }
+    
 }

@@ -11,11 +11,14 @@
 		09286DA82697955E000DC648 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09286DA72697955E000DC648 /* AuthenticationViewModel.swift */; };
 		09345DDC268D5C8B00C85D1B /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09345DDB268D5C8B00C85D1B /* FeedCell.swift */; };
 		09345DDE268D5F3800C85D1B /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09345DDD268D5F3800C85D1B /* Extension.swift */; };
+		09447A0326B9F3FB00C8AED1 /* CommentInputAccesoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09447A0226B9F3FB00C8AED1 /* CommentInputAccesoryView.swift */; };
 		09584AA026A90027005EB4AC /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09584A9F26A90027005EB4AC /* UserCell.swift */; };
 		0978CB6526B0D3A10061A9C2 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978CB6426B0D3A10061A9C2 /* Post.swift */; };
 		0978CB6726B0D8570061A9C2 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978CB6626B0D8570061A9C2 /* PostViewModel.swift */; };
 		09794144269E7B840038B37B /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09794143269E7B840038B37B /* ProfileCell.swift */; };
 		09794146269E7B940038B37B /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09794145269E7B940038B37B /* ProfileHeader.swift */; };
+		09796E5F26B8DC4E00A66EF8 /* CommentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09796E5E26B8DC4E00A66EF8 /* CommentController.swift */; };
+		09796E6126B8DE3900A66EF8 /* CommentCelll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09796E6026B8DE3900A66EF8 /* CommentCelll.swift */; };
 		097A3BA8269543CA00DEBDB7 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097A3BA7269543CA00DEBDB7 /* CustomTextField.swift */; };
 		097FA9BE268EB24600251C41 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097FA9BD268EB24600251C41 /* LoginController.swift */; };
 		097FA9C0268EB25C00251C41 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097FA9BF268EB25C00251C41 /* RegistrationController.swift */; };
@@ -51,11 +54,14 @@
 		09286DA72697955E000DC648 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		09345DDB268D5C8B00C85D1B /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		09345DDD268D5F3800C85D1B /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		09447A0226B9F3FB00C8AED1 /* CommentInputAccesoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentInputAccesoryView.swift; sourceTree = "<group>"; };
 		09584A9F26A90027005EB4AC /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		0978CB6426B0D3A10061A9C2 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		0978CB6626B0D8570061A9C2 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		09794143269E7B840038B37B /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		09794145269E7B940038B37B /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
+		09796E5E26B8DC4E00A66EF8 /* CommentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentController.swift; sourceTree = "<group>"; };
+		09796E6026B8DE3900A66EF8 /* CommentCelll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCelll.swift; sourceTree = "<group>"; };
 		097A3BA7269543CA00DEBDB7 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		097FA9BD268EB24600251C41 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		097FA9BF268EB25C00251C41 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
@@ -192,6 +198,7 @@
 				0982025D268D43930044B441 /* NotificationController.swift */,
 				0982025F268D43A00044B441 /* ProfileController.swift */,
 				0985A5CB26B09FEF008EF7EE /* UploadPostController.swift */,
+				09796E5E26B8DC4E00A66EF8 /* CommentController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -204,6 +211,8 @@
 				097A3BA7269543CA00DEBDB7 /* CustomTextField.swift */,
 				09286DA5269791B9000DC648 /* CustomButton.swift */,
 				09584A9F26A90027005EB4AC /* UserCell.swift */,
+				09796E6026B8DE3900A66EF8 /* CommentCelll.swift */,
+				09447A0226B9F3FB00C8AED1 /* CommentInputAccesoryView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -372,10 +381,12 @@
 				09D47F8A26A1118E00ABC2D0 /* UserService.swift in Sources */,
 				09D3AAD52697EB3B00246E7F /* AuthService.swift in Sources */,
 				0981190D26A12934009C6549 /* ProfileHeaderViewmodel.swift in Sources */,
+				09447A0326B9F3FB00C8AED1 /* CommentInputAccesoryView.swift in Sources */,
 				09286DA6269791B9000DC648 /* CustomButton.swift in Sources */,
 				097FA9BE268EB24600251C41 /* LoginController.swift in Sources */,
 				09794144269E7B840038B37B /* ProfileCell.swift in Sources */,
 				09345DDE268D5F3800C85D1B /* Extension.swift in Sources */,
+				09796E6126B8DE3900A66EF8 /* CommentCelll.swift in Sources */,
 				09584AA026A90027005EB4AC /* UserCell.swift in Sources */,
 				09820238268D3D2D0044B441 /* ViewController.swift in Sources */,
 				09345DDC268D5C8B00C85D1B /* FeedCell.swift in Sources */,
@@ -383,6 +394,7 @@
 				09794146269E7B940038B37B /* ProfileHeader.swift in Sources */,
 				0978CB6526B0D3A10061A9C2 /* Post.swift in Sources */,
 				09820260268D43A00044B441 /* ProfileController.swift in Sources */,
+				09796E5F26B8DC4E00A66EF8 /* CommentController.swift in Sources */,
 				09820256268D3EFE0044B441 /* MainTabControlller.swift in Sources */,
 				0982025E268D43930044B441 /* NotificationController.swift in Sources */,
 				0985A5CE26B0A3AE008EF7EE /* InputTextView.swift in Sources */,
