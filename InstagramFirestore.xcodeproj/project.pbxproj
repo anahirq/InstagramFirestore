@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0907A8E626BA0E7A00D0DA23 /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0907A8E526BA0E7A00D0DA23 /* CommentService.swift */; };
+		0907A8EA26BA14F000D0DA23 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0907A8E926BA14F000D0DA23 /* Comment.swift */; };
+		092483F326BA378C00C0C1BB /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092483F226BA378C00C0C1BB /* CommentViewModel.swift */; };
 		09286DA6269791B9000DC648 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09286DA5269791B9000DC648 /* CustomButton.swift */; };
 		09286DA82697955E000DC648 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09286DA72697955E000DC648 /* AuthenticationViewModel.swift */; };
 		09345DDC268D5C8B00C85D1B /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09345DDB268D5C8B00C85D1B /* FeedCell.swift */; };
@@ -52,6 +54,8 @@
 
 /* Begin PBXFileReference section */
 		0907A8E526BA0E7A00D0DA23 /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
+		0907A8E926BA14F000D0DA23 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		092483F226BA378C00C0C1BB /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		09286DA5269791B9000DC648 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		09286DA72697955E000DC648 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		09345DDB268D5C8B00C85D1B /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
@@ -225,6 +229,7 @@
 			children = (
 				09D47F8D26A1144200ABC2D0 /* User.swift */,
 				0978CB6426B0D3A10061A9C2 /* Post.swift */,
+				0907A8E926BA14F000D0DA23 /* Comment.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 				0981190C26A12934009C6549 /* ProfileHeaderViewmodel.swift */,
 				099FA15926AA449300F4E9F9 /* UserViewModel.swift */,
 				0978CB6626B0D8570061A9C2 /* PostViewModel.swift */,
+				092483F226BA378C00C0C1BB /* CommentViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -392,6 +398,7 @@
 				09796E6126B8DE3900A66EF8 /* CommentCelll.swift in Sources */,
 				09584AA026A90027005EB4AC /* UserCell.swift in Sources */,
 				09820238268D3D2D0044B441 /* ViewController.swift in Sources */,
+				0907A8EA26BA14F000D0DA23 /* Comment.swift in Sources */,
 				09345DDC268D5C8B00C85D1B /* FeedCell.swift in Sources */,
 				0982025A268D43600044B441 /* SearchController.swift in Sources */,
 				09794146269E7B940038B37B /* ProfileHeader.swift in Sources */,
@@ -399,6 +406,7 @@
 				09820260268D43A00044B441 /* ProfileController.swift in Sources */,
 				09796E5F26B8DC4E00A66EF8 /* CommentController.swift in Sources */,
 				09820256268D3EFE0044B441 /* MainTabControlller.swift in Sources */,
+				092483F326BA378C00C0C1BB /* CommentViewModel.swift in Sources */,
 				0982025E268D43930044B441 /* NotificationController.swift in Sources */,
 				0985A5CE26B0A3AE008EF7EE /* InputTextView.swift in Sources */,
 				09D47F8E26A1144200ABC2D0 /* User.swift in Sources */,
