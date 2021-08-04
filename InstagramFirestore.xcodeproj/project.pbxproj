@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0907A8E626BA0E7A00D0DA23 /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0907A8E526BA0E7A00D0DA23 /* CommentService.swift */; };
 		09286DA6269791B9000DC648 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09286DA5269791B9000DC648 /* CustomButton.swift */; };
 		09286DA82697955E000DC648 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09286DA72697955E000DC648 /* AuthenticationViewModel.swift */; };
 		09345DDC268D5C8B00C85D1B /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09345DDB268D5C8B00C85D1B /* FeedCell.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0907A8E526BA0E7A00D0DA23 /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
 		09286DA5269791B9000DC648 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		09286DA72697955E000DC648 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		09345DDB268D5C8B00C85D1B /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				09D3AAD42697EB3A00246E7F /* AuthService.swift */,
 				09D47F8926A1118E00ABC2D0 /* UserService.swift */,
 				0985A5CF26B0B36E008EF7EE /* PostService.swift */,
+				0907A8E526BA0E7A00D0DA23 /* CommentService.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				0985A5CE26B0A3AE008EF7EE /* InputTextView.swift in Sources */,
 				09D47F8E26A1144200ABC2D0 /* User.swift in Sources */,
 				0985A5D026B0B36E008EF7EE /* PostService.swift in Sources */,
+				0907A8E626BA0E7A00D0DA23 /* CommentService.swift in Sources */,
 				09820234268D3D2D0044B441 /* AppDelegate.swift in Sources */,
 				09820236268D3D2D0044B441 /* SceneDelegate.swift in Sources */,
 				099FA15A26AA449300F4E9F9 /* UserViewModel.swift in Sources */,

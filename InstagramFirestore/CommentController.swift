@@ -12,14 +12,26 @@ private let reuseIdentifier = "CommentCell"
 class CommentController: UICollectionViewController {
     //MARK: - Properties
     
+    private let post: Post
+    
     private lazy var commentInputView: CommentInputAccesoryView = {
         let frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 50)
         let cv = CommentInputAccesoryView(frame: frame)
+        cv.delegate = self
         
         return cv
     }()
     
     //MARK: - Lifecycle
+    
+    init(post: Post) {
+        self.post = post
+        super.init(collectionViewLayout: UICollectionViewFlowLayout())
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +68,7 @@ class CommentController: UICollectionViewController {
         
         //Dismiss keyboard when pull down comments
         collectionView.alwaysBounceVertical = true
-        collectionView.keyboardDismissMode = . interactive
+        collectionView.keyboardDismissMode = .interactive
     }
 }
 
@@ -82,5 +94,23 @@ extension CommentController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         return CGSize(width: view.frame.width, height: 80)
+    }
+}
+
+//MARK: - CommentInputAccesoryViewDelegate
+
+extension CommentController: CommentInputAccesoryViewDelegate {
+    func inputView(_ inputView: CommentInputAccesoryView, wantsToUploadComment comment: String) {
+        
+        
+        guard let tab = tabBarController as? MainTabController else { return }
+        guard let user = tab.user else { return }
+        
+        showLoader(true)
+        
+        CommentService.uploadComment(comment: comment, postID: post.postId, user: user) { error in
+            self.showLoader(false)
+            inputView.clearCommentTextView()
+        }
     }
 }
